@@ -1,0 +1,34 @@
+{
+  "name": "flyrank-capstone-metering-billing",
+  "version": "1.0.0",
+  "description": "Usage Metering & Billing Engine with Idempotent Metering, Quota Enforcement, Money Math, and Stripe Webhooks",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "seed": "node src/db/seed.js",
+    "test": "node test/runner.js"
+  },
+  "keywords": [
+    "billing",
+    "metering",
+    "idempotency",
+    "quotas",
+    "stripe",
+    "webhooks",
+    "money-math",
+    "sqlite",
+    "express"
+  ],
+  "author": "Hossam Saber",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "morgan": "^1.10.0",
+    "stripe": "^17.5.0",
+    "zod": "^3.24.1"
+  }
+}

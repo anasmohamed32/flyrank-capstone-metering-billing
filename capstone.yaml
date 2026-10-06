@@ -1,0 +1,46 @@
+name: flyrank-capstone-metering-billing
+version: 1.0.0
+description: Usage Metering & Billing Engine with Idempotent Metering, Quota Enforcement, Money Math, and Stripe Webhooks
+author: Hossam Saber
+language: javascript
+runtime: nodejs-22
+
+run: npm start
+seed: npm run seed
+test: npm test
+base_url: http://localhost:3000
+
+endpoints:
+  health:
+    method: GET
+    path: /health
+  generate_billable:
+    method: POST
+    path: /api/v1/generate
+  usage_summary:
+    method: GET
+    path: /api/v1/usage/:tenant_id
+  usage_record:
+    method: POST
+    path: /api/v1/usage/record
+  plans_list:
+    method: GET
+    path: /api/v1/usage/plans/list
+  tenants_list:
+    method: GET
+    path: /api/v1/usage/tenants/list
+  billing_checkout:
+    method: POST
+    path: /api/v1/billing/checkout
+  stripe_webhook:
+    method: POST
+    path: /api/v1/webhooks/stripe
+  invoices_generate:
+    method: POST
+    path: /api/v1/billing/invoices/generate
+  invoices_list:
+    method: GET
+    path: /api/v1/billing/invoices/:tenant_id
+  reconcile_subscriptions:
+    method: GET
+    path: /api/v1/billing/reconcile
